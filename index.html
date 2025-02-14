@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Will You Be My Valentine?</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:wght@400;700&display=swap');
+    
+    body {
+      font-family: 'Playfair Display', serif;
+      background: url('bgg.webp') no-repeat center center fixed;
+      background-size: cover;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.3);
+      z-index: 1;
+    }
+
+    .card {
+      width: 50%;
+      height: 50%;
+      background: rgba(255, 0, 102, 0.8);
+      border-radius: 20px;
+      box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.3);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 40px;
+      position: relative;
+      border: 5px solid white;
+      transition: transform 0.8s ease-in-out, opacity 0.5s ease-in-out;
+      z-index: 2;
+    }
+
+    .full-page {
+      width: 100%;
+      height: 100%;
+      background: #F5E6CC;
+      border-radius: 0;
+      padding: 60px;
+      line-height: 1.6;
+      color: black;
+    }
+
+    h1 {
+      font-size: 3rem;
+      color: white;
+      font-family: 'Great Vibes', cursive;
+      text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
+    }
+
+    p {
+      font-size: 1.8rem;
+      color: black;
+      font-weight: bold;
+      margin-bottom: 20px;
+    }
+
+    .button {
+      background: white;
+      color: #ff4e50;
+      padding: 14px 35px;
+      border: none;
+      border-radius: 25px;
+      font-size: 1.5rem;
+      cursor: pointer;
+      transition: transform 0.3s ease, background-color 0.3s ease;
+      font-family: 'Playfair Display', serif;
+      margin: 10px;
+      box-shadow: 0px 5px 15px rgba(255, 255, 255, 0.3);
+      font-weight: bold;
+    }
+
+    .button:hover {
+      transform: scale(1.1);
+      background: #ffccd5;
+    }
+
+    .hidden { display: none; }
+
+    .popup {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.9);
+      display: none;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      z-index: 5;
+    }
+
+    .popup img {
+      width: 504px; /* Scaled up by 1.5x */
+      height: 429px; /* Scaled up by 1.5x */
+      object-fit: contain;
+      border-radius: 10px;
+      margin-bottom: 20px; /* Space between GIF and button */
+    }
+
+    .thank-you-page {
+      background: rgba(255, 0, 102, 0.8);
+      color: white;
+      font-family: 'Great Vibes', cursive;
+      font-size: 3rem;
+      text-align: center;
+      padding: 40px;
+      border-radius: 20px;
+      border: 5px solid white;
+    }
+
+    /* Music player styling */
+    #musicPlayer {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      z-index: 10;
+      background: rgba(255, 255, 255, 0.8);
+      border-radius: 25px;
+      padding: 10px;
+      box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+    }
+  </style>
+</head>
+<body>
+  <div class="overlay"></div>
+
+  <!-- Background Music -->
+  <audio id="backgroundMusic" loop muted>
+    <source src="Stephen Dawes - Teenage Dream (Lyric Video).mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
+
+  <!-- Music Player Controls -->
+  <div id="musicPlayer">
+    <button onclick="toggleMusic()">🎵</button>
+    <input type="range" id="volumeControl" min="0" max="1" step="0.1" value="0.5" onchange="setVolume(this.value)">
+  </div>
+
+  <div class="card" id="firstPage">
+    <h1>Hey Doha,</h1>
+    <p>I want to tell you something...</p>
+    <button class="button" onclick="flipCard('messagePage')">Ḥell l-bab dyal qalbi 💖</button>
+  </div>
+
+  <div class="card full-page hidden" id="messagePage">
+    <p>These past 10 months with you have flown by in the blink of an eye, yet every moment has been so full of love, laughter, our fights and color that it feels like a lifetime of happiness already. I still can’t believe how lucky I am to have found you, to have met you, to know you, and to now be your future Rajli. You’re my soulmate, my other half, the missing piece of my heart I didn’t even know I was searching for until you came into my life. I love you more than words could ever capture, my heart beats for you, my bb dodo.
+
+This Valentine’s Day, I want you to know that you are my greatest treasure, my everything. You’ve brought so much light into my life, and I promise to spend every day making sure you feel as loved and cherished as you make me feel. I want to be the reason you smile, the one who holds your hand through every storm, and the person who celebrates every little victory with you. I’ll love you endlessly and unconditionally today, tomorrow, and forever.
+
+I dream of our future together all the time. Exploring the world, creating a lifetime of memories, making little versions of us, and watching them grow into beautiful souls just like you. I can’t wait to grow old with you, to look back on our journey and know that every step was worth it because it was with you. You are my forever, my always, my heart and soul.
+
+Doha, U will be my Valentine today and every day!! I love you more than the stars love the sky, more than the ocean loves the shore. You are my everything, and I am so grateful to have you in my life. Here’s to a lifetime of love, laughter, and adventures together. I love youuuuu soooo muchhhhh, my bb dodo, I can never stop Loving you, my future Mrati. Forever and always, in this universe and every other, I’ll choose you. 💕</p>
+    <button class="button" onclick="flipCard('questionPage')">Khalina nbqaou ʿayshin f siḥr lḥob ✨</button>
+  </div>
+
+  <div class="card hidden" id="questionPage">
+    <p>I have an important question to ask...</p>
+    <button class="button" onclick="flipCard('valentineCard')">Take My Hand, Yalla! 🤍</button>
+  </div>
+
+  <div class="card hidden" id="valentineCard">
+    <h1>Will You Be My Valentine?</h1>
+    <p>You make my heart skip a beat! 💖</p>
+    <div>
+      <button class="button" onclick="sayYes()">Forever Yours! 💘</button>
+      <button id="noButton" class="button" onmouseover="moveButton()">Not a Chance! 😜</button>
+    </div>
+  </div>
+
+  <div class="popup full-page" id="yesPopup">
+    <img src="cute gif.gif" alt="Cute GIF">
+    <button class="button" onclick="showThankYouPage()">Let’s Start Forever Together 🌟</button>
+  </div>
+
+  <div class="card hidden thank-you-page" id="thankYouPage">
+    <h1>Thank you for always being there for me, Doha 💕</h1>
+    <h1>For a Lifetime Together To Many More</h1>
+  </div>
+
+  <script>
+    // Music Controls
+    const music = document.getElementById('backgroundMusic');
+
+    // Unmute and play music on user interaction
+    document.body.addEventListener('click', () => {
+      if (music.muted) {
+        music.muted = false;
+        music.play();
+      }
+    });
+
+    function toggleMusic() {
+      if (music.paused) {
+        music.play();
+      } else {
+        music.pause();
+      }
+    }
+
+    function setVolume(volume) {
+      music.volume = volume;
+    }
+
+    function flipCard(nextPage) {
+      document.querySelectorAll('.card').forEach(card => card.classList.add('hidden'));
+      document.getElementById(nextPage).classList.remove('hidden');
+    }
+
+    function sayYes() {
+      document.getElementById('yesPopup').style.display = 'flex';
+    }
+
+    function moveButton() {
+      const noButton = document.getElementById('noButton');
+      const viewportWidth = window.innerWidth;
+      const viewportHeight = window.innerHeight;
+      const randomX = Math.random() * (viewportWidth / 2) - viewportWidth / 4;
+      const randomY = Math.random() * (viewportHeight / 2) - viewportHeight / 4;
+      noButton.style.transform = `translate(${randomX}px, ${randomY}px)`;
+    }
+
+    function showThankYouPage() {
+    document.getElementById('yesPopup').style.display = 'none';
+    document.querySelectorAll('.card').forEach(card => card.classList.add('hidden'));
+    document.getElementById('thankYouPage').classList.remove('hidden');
+    }
+  </script>
+</body>
+</html>
